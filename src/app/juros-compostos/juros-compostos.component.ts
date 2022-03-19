@@ -19,7 +19,7 @@ export class JurosCompostosComponent implements OnInit {
     for (let i = 1; i <= this.n; i++) {
       let simples = this.vp * (1 + (this.j / 100) * i);
       let composto = Math.pow(this.vp * (1 + this.j / 100), i);
-      this.juros.push({ simples, composto, periodo: i });
+      this.juros.push({ simples, composto, nc: i });
     }
     return this.juros;
   }
